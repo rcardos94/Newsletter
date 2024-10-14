@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Neighborhood Post - Breaking News, Articles, and Gallery</title>
+    <meta name="description" content="Stay updated with the latest news, read in-depth articles, and explore our gallery.">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>The Neighborhood Post</h1> <!-- Main header -->
+            <nav>
+                <div class="hamburger" aria-label="Toggle Navigation Menu">☰</div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li> <!-- Active home link -->
+                    <li><a href="article.html">Article</a></li> <!-- Article page link -->
+                    <li><a href="gallery.html">Gallery</a></li> <!-- Gallery page link -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Featured Article and Latest News -->
+        <div class="news-columns">
+            <section class="featured-article">
+                <h2>Chaos Strikes</h2>
+                <p>Local squirrels have staged a hostile takeover of the neighborhood bird feeders, sending birds into an uproar. Eyewitnesses report the squirrels working in teams, using advanced acorn-lobbing tactics. "We never saw it coming," said one bewildered blue jay.
+                    Residents are advised to secure their snacks and remain indoors until further notice. In unrelated news, local dogs seem unusually excited about today's developments. Stay tuned for updates!.</p>
+            </section>
+
+            <section class="latest-news">
+                <h2>Breaking News</h2> 
+                <p>Chaos erupted in Kennesaw after a mysterious shipment of 10,000 tons of nuts accidentally landed in Swift Cantrell Park, causing local squirrels to grow to massive sizes. The giant squirrels have since taken over playgrounds, houses, schools, and even Kennesaw Hall. Attempts to appease the squirrels with peanut butter sandwiches have failed, as the rodents now appear to be running the city. People are loving it, but officials are scrambling to regain control.</p>
+            </section>
+        </div>
+
+        <!-- Fun Game Section -->
+        <section class="fun-game">
+            <h2>Guess the Headline</h2>
+            <p>Try to guess the missing word in the headline:</p>
+            <p><strong>In Autumn, the Ground is Covered in ______</strong></p>
+            <input type="text" id="guess" placeholder="Your guess here"> <!-- User input for guessing -->
+            <button id="submitGuess">Submit</button> <!-- Submit button -->
+            <p id="result" aria-live="polite"></p> <!-- Result display -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Neighborhood Post. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:email@example.com">email@example.com</a></p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- JavaScript for the fun game -->
+    <script>
+        document.getElementById("submitGuess").addEventListener("click", function() {
+            const guess = document.getElementById("guess").value.toLowerCase(); // Get user input
+            const correctAnswer = "acorn";// Correct answer
+            const result = document.getElementById("result");
+
+            if (guess === correctAnswer.toLowerCase()) { // Convert the correct answer to lowercase for comparison
+                result.textContent = "Correct! In Autumn, the Ground is Covered in acorn";
+                result.setAttribute("aria-live", "assertive");
+            } else {
+                result.textContent = "Oops! Try again!";
+                result.setAttribute("aria-live", "assertive");
+            }
+
+            // Clear the input field for the next guess
+            document.getElementById("guess").value = "";
+        });
+    </script>
+
+    <!-- JavaScript for hamburger menu -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Neighborhood Post - Gallery</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>The Neighborhood Post</h1> <!-- Main header -->
+            <nav>
+                <div class="hamburger" aria-label="Toggle Navigation Menu">☰</div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li> <!-- Active home link -->
+                    <li><a href="article.html">Article</a></li> <!-- Article page link -->
+                    <li><a href="gallery.html">Gallery</a></li> <!-- Gallery page link -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Photo Gallery Section -->
+        <section class="photo-gallery">
+            <div class="photo active-photo"><img src="Images/squirel.jpg" alt="Photo 1"></div>
+            <div class="photo"><img src="Images/squirel2.jpg" alt="Photo 2"></div>
+            <div class="photo"><img src="Images/acorn.jpg" alt="Photo 2"></div>
+        </section>
+
+        <!-- Navigation Controls (Previous/Next buttons) -->
+        <div class="gallery-controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Neighborhood Post. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:email@example.com">email@example.com</a></p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        // JavaScript for gallery navigation
+        let currentPhotoIndex = 0;
+        const photos = document.querySelectorAll('.photo');
+        const totalPhotos = photos.length;
+
+        document.getElementById('next').addEventListener('click', () => {
+            photos[currentPhotoIndex].classList.remove('active-photo');
+            currentPhotoIndex = (currentPhotoIndex + 1) % totalPhotos; // Loop back to the first photo
+            photos[currentPhotoIndex].classList.add('active-photo');
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            photos[currentPhotoIndex].classList.remove('active-photo');
+            currentPhotoIndex = (currentPhotoIndex - 1 + totalPhotos) % totalPhotos; // Loop back to the last photo
+            photos[currentPhotoIndex].classList.add('active-photo');
+        });
+
+        // JavaScript for hamburger menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

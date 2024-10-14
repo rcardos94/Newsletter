@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Neighborhood Post - Article</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>The Neighborhood Post</h1> <!-- Main header -->
+            <nav>
+                <div class="hamburger" aria-label="Toggle Navigation Menu">☰</div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li> <!-- Active home link -->
+                    <li><a href="article.html">Article</a></li> <!-- Article page link -->
+                    <li><a href="gallery.html">Gallery</a></li> <!-- Gallery page link -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="article-layout">
+        <!-- Article Content Section -->
+        <section class="article-content">
+            <h2>Squirrels Take Over Kennesaw</h2>
+            <h4>October 2, 2024 - Kennesaw,GA</h4>
+            <p>In a turn of events straight out of a sci-fi movie, Kennesaw is now under the paws of giant squirrels! What started as an innocent shipping error—10,000 tons of nuts meant for upstate—has transformed the city into a battleground between humans and these oversized rodents. Swift-Cantrell Park, once a peaceful retreat, is now their headquarters, as the squirrels have claimed dominion over local businesses, food vendors, and even government offices.
+                The squirrels, now the size of large dogs, have shown no signs of backing down, despite several city-led peace efforts, including offerings of peanut butter sandwiches and public service announcements warning residents to “hide your snacks.” Citizens are advised to avoid carrying any nut-based products while walking the streets, as even the smallest peanut can spark a chase
+                Tourists, however, seem thrilled by the spectacle. “I came here to see the sights, but giant squirrels? That's way better!” said one excited visitor from Texas. Social media is buzzing with #SquirrelTakeover posts, as selfies with the furry giants flood Instagram.
+                Mayor Jane Thompson has called for an emergency meeting to address the situation but was reportedly outmaneuvered by a particularly bold squirrel that commandeered her chair during the summit. Meanwhile, a new city mascot, "Squirrely the Overlord," has been unofficially crowned by residents embracing the chaos.</p>
+            <h3>As the city grapples with its new rodent rulers, one thing is clear: this is one nutty chapter in Kennesaw history.</h3>
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <section class="advertisement">
+                <h3>Adopt a Giant Squirrel Today! 🐿️</h3>
+                <p>Have you been captivated by the recent giant squirrel takeover? Now’s your chance to bring home one of these majestic creatures! The NYC Animal Rescue is launching a special Giant Squirrel Adoption Program to help these supersized rodents find loving homes.</p>
+                <p>These furry giants are loyal, fun-loving, and great at cracking walnuts (and maybe the occasional hot dog stand). Help us keep them off the streets—and into your heart! ❤️</p>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Neighborhood Post. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:email@example.com">email@example.com</a></p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <!-- JavaScript for hamburger menu -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
